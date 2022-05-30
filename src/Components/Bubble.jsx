@@ -3,11 +3,10 @@ import { useSelector } from "react-redux";
 
 export const Buble = () => {
   const data = useSelector((store) => store.circleData);
-  console.log("data", data);
 
   return (
     <div>
-      <h4 style={{ color: "#ee5701" }}>Circle</h4>
+      <h4 style={{ color: "#ee5701" }}>Bubble</h4>
       <div className='circle-main'>
       {data?.map((item, index) => {
         return (

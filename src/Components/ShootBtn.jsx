@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeFromQueue, addCircleInConatiner } from "../redux/action";
 
 export const ShootBtn = () => {
-  const [val, setVal] = useState(0);
+  const [val, setVal] = useState();
   const [error, setError] = useState(false);
   const data = useSelector((store) => store.circleData);
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ export const ShootBtn = () => {
           onChange={(e) => setVal(e.target.value)}
           value={val}
         />
-        <button id='shoot-btn' onClick={hadleShoot}>shoot </button>
+        <button id='shoot-btn' onClick={hadleShoot}> Shoot </button>
        
 
     </div>

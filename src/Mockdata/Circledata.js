@@ -6,7 +6,6 @@ export const circleData=[
         position:0,
     },
     {
-        // id:2,
         id: 2,
         color: '#' +uuidv4().slice(0,4),
         position:2,
