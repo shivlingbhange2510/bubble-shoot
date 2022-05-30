@@ -1,29 +1,26 @@
-import React,{useState, useEffect} from 'react'
-export const Circle = ({circleData}) => {
-    const[data, setData]= useState(circleData)
-    // const[d]
-    useEffect(()=>{
-        setData(circleData)
-    },[])
+import React from "react";
+import { useSelector } from "react-redux";
 
-const removeContainer=(id)=>{
-    console.log("removed item : ", id)
-}
+export const Circle = () => {
+  const data = useSelector((store) => store.circleData);
+  console.log("data", data);
+
   return (
     <div>
-      Circle
-      {data.map((item, index) => {
+      <h4 style={{ color: "#ee5701" }}>Circle</h4>
+      <div className='circle-main'>
+      {data?.map((item, index) => {
         return (
-          <>
-            <button
-             key={index}
-            onClick={()=>{removeContainer(item.id)}}
-            className="circle"
-            style={{ backgroundColor: `${item.color}` }}
-            ></button>
-          </>
+          
+            <div
+              key={item.id}
+              className="circle"
+              id="circle-area"
+              style={{ backgroundColor: "" + item.color }}
+            ></div>
         );
       })}
+      </div>
     </div>
   );
 };

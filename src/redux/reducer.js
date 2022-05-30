@@ -6,8 +6,6 @@ const initialState = {
 }
 export const reducer =(state=initialState, action)=>{
     const {payload, type}=action;
-    console.log("reducer : ", action)
-
     switch(type){
         case  REMOVE_CIRCLE_FROM_QUEUE :
             return{
@@ -19,7 +17,7 @@ export const reducer =(state=initialState, action)=>{
             }
         case REMOVED_FROM_CONTAINER:
             return{
-                ...state, container: state.container.filter((item)=>item.id!=payload)
+                ...state, container: state.container.filter((item)=>item.id!==payload)
             }
         case REMOVE_FROM_CONTAINER_ADD_IN_QUEUE:
             return{

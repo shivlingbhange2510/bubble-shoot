@@ -16,7 +16,7 @@ export const Container = () => {
   };
   return (
     <div>
-      conainer
+    
       <div id="container">
         {data?.map((item, index) => {
           return (
