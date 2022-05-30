@@ -1,5 +1,5 @@
 import React from "react";
-import { Circle } from "./Circle";
+import { Buble } from "./Bubble";
 import { ShootBtn } from "./ShootBtn";
 import { Container } from "./Container";
 export const Index = () => {
@@ -9,7 +9,7 @@ export const Index = () => {
         <Container />
       </div>
       <div>
-        <Circle />
+        <Buble />
       </div>
       <div>
         <ShootBtn />

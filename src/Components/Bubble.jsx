@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-export const Circle = () => {
+export const Buble = () => {
   const data = useSelector((store) => store.circleData);
   console.log("data", data);
 
